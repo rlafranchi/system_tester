@@ -1,0 +1,15 @@
+one:
+  id: 1
+  tude_tester_step_id: 1
+  tude_tester_scenario_id: 1
+  position: 1
+three:
+  id: 2
+  tude_tester_step_id: 3
+  tude_tester_scenario_id: 1
+  position: 3
+two:
+  id: 3
+  tude_tester_step_id: 2
+  tude_tester_scenario_id: 1
+  position: 2

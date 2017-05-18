@@ -1,0 +1,18 @@
+one:
+  id: 1
+  title: Click on element
+  type: TudeTester::ClickOn
+  arg_one: element
+  arg_two: nil
+two:
+  id: 2
+  title: visit path
+  type: TudeTester::Visit
+  arg_one: path
+  arg_two: nil
+three:
+  id: 3
+  title: assert text 
+  type: TudeTester::AssertSelector
+  arg_one: h1
+  arg_two: text
