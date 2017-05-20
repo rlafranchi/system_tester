@@ -4,12 +4,12 @@ module TudeTester
   class ScenarioTest < ActiveSupport::TestCase
     test "#to_s" do
       scenario = tude_tester_scenarios(:one)
-      assert_equal script_output_basic, scenario.to_s
+      assert_equal script_basic_output, scenario.to_s
     end
 
     private
 
-    def script_output_basic
+    def script_basic_output
       <<-EOF
     test "Scenario One" do
       # Action: Click on element
