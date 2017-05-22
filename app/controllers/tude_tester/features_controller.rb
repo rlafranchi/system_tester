@@ -5,7 +5,5 @@ module TudeTester
     def index
       render json: Feature.all
     end
-
-    def create
   end
 end
