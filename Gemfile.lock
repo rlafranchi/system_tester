@@ -65,6 +65,7 @@ GEM
     nokogiri (1.7.2)
       mini_portile2 (~> 2.1.0)
     rack (2.0.2)
+    rack-cors (0.4.1)
     rack-test (0.6.3)
       rack (>= 1.0)
     rails (5.1.0)
@@ -111,8 +112,9 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  rack-cors
   sqlite3
   tude_tester!
 
 BUNDLED WITH
-   1.14.6
+   1.15.0

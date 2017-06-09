@@ -9,5 +9,12 @@ module TudeTester
       assert_response :success
     end
 
+    test "should post create" do
+      assert_difference('Feature.count', 1) do
+        post tude_tester_features_create_url, params: { feature: { title: 'Title' } }
+      end
+      assert_response :success
+    end
+
   end
 end

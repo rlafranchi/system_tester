@@ -1,5 +1,7 @@
 module TudeTester
   class Feature < ApplicationRecord
+    include TudeTester::TitleValidatable
+
     has_many :scenarios, foreign_key: "tude_tester_feature_id", class_name: 'TudeTester::Scenario'
 
     def to_s
