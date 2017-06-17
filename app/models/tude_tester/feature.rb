@@ -1,6 +1,7 @@
 module TudeTester
   class Feature < ApplicationRecord
     include TudeTester::TitleValidatable
+    validates_uniqueness_of :title
 
     has_many :scenarios, foreign_key: "tude_tester_feature_id", class_name: 'TudeTester::Scenario', dependent: :destroy
 
