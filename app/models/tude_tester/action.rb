@@ -3,6 +3,10 @@ module TudeTester
     def to_s
       "#{INDENT}# Action: #{title}\n"
     end
+
+    def bg_css
+      "orange"
+    end
   end
 end
 
