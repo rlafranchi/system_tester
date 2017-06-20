@@ -6,6 +6,11 @@ module TudeTester
       render json: Scenario.all.to_json(scenario_json_options)
     end
 
+    def show
+      scenario = Scenario.find(params[:id])
+      render json: scenario.to_json(scenario_json_options)
+    end
+
     def create
       scenario = Scenario.new(scenario_params)
       if scenario.save
@@ -39,11 +44,15 @@ module TudeTester
       {
         include: {
           scenario_steps: {
-            methods: [:friendly_type, :parent_type, :bg_css, :text_css],
-            include: :step
-          }
+            include: {
+              step: {
+                methods: [:friendly_type, :parent_type, :bg_css, :text_css, :icon]
+              }
+            }
+          },
+          feature: {}
         },
-        methods: [:feature, :to_s]
+        methods: [:to_s]
       }
     end
 

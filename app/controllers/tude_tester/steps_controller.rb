@@ -37,7 +37,7 @@ module TudeTester
     
     def step_json_options
       {
-        methods: [:type, :friendly_type, :parent_type, :to_s, :bg_css, :text_css],
+        methods: [:type, :friendly_type, :parent_type, :to_s, :bg_css, :text_css, :icon],
         include: :scenarios
       }
     end

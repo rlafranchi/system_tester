@@ -7,6 +7,10 @@ module TudeTester
     def bg_css
       "green"
     end
+
+    def icon
+      "done"
+    end
   end
 end
 

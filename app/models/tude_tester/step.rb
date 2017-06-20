@@ -27,7 +27,7 @@ module TudeTester
     end
 
     def text_css
-      "#{bg_css}-text"
+      "white-text"
     end
   end
 end

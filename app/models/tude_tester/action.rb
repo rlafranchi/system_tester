@@ -7,6 +7,10 @@ module TudeTester
     def bg_css
       "orange"
     end
+
+    def icon
+      "input"
+    end
   end
 end
 
