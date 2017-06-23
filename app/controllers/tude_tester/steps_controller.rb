@@ -6,6 +6,14 @@ module TudeTester
       render json: Step.all.to_json(step_json_options)
     end
 
+    def show
+      render json: Step.find(params[:id]).to_json(step_json_options)
+    end
+
+    def new
+      render json: Step.new(step_params).to_json(step_json_options)
+    end
+
     def create
       step = Step.new(step_params)
       if step.save

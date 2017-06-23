@@ -10,8 +10,12 @@ module TudeTester
              dependent: :destroy
     has_many :scenarios, through: :scenario_steps
 
+    def self.friendly_type
+      name.demodulize
+    end
+
     def friendly_type
-      self.class.name.demodulize
+      self.class.friendly_type
     end
 
     def parent_type
@@ -19,7 +23,12 @@ module TudeTester
     end
 
     def self.leafs
-      descendants.map(&:to_s) - direct_descendants.map(&:to_s)
+      (descendants - direct_descendants).map do |desc|
+        {
+          name: desc.to_s,
+          friendly: desc.friendly_type
+        }
+      end
     end
 
     def bg_css

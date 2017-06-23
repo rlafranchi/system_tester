@@ -4,7 +4,7 @@ module TudeTester
       "#{super}#{INDENT}click_on \"#{arg_one}\"\n\n"
     end
 
-    def friendly_type
+    def self.friendly_type
       "Click"
     end
   end

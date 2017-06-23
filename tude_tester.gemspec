@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.email       = ["rlafranchi@icloud.com"]
   s.homepage    = "http://github.com/rlafranchi/tude_tester"
   s.summary     = "TudeTester: Rails Testing at Altitude"
-  s.description = "TudeTester aims to symplify QA for Rails applications by providing a development tool for creating system tests"
+  s.description = "TudeTester aims to symplify QA for Rails applications by providing a development tool for creating and managing system tests"
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
