@@ -14,21 +14,35 @@ module TudeTester
       name.demodulize
     end
 
+    def self.parent_type
+      ancestors.fourth.name.demodulize
+    end
+
     def friendly_type
       self.class.friendly_type
     end
 
     def parent_type
-      self.class.ancestors.fourth.name.demodulize
+      self.class.parent_type
     end
 
     def self.leafs
       (descendants - direct_descendants).map do |desc|
         {
           name: desc.to_s,
+          friendly: desc.friendly_type,
+          parent: desc.parent_type
+        }
+      end.sort_by { |step_type| [step_type[:parent_type], step_type[:friendly]] }
+    end
+
+    def self.parent_types
+      direct_descendants.map do |desc|
+        {
+          name: desc.to_s,
           friendly: desc.friendly_type
         }
-      end
+      end.sort_by { |step_type| step_type[:friendly] }
     end
 
     def bg_css

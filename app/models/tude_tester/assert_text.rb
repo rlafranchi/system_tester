@@ -4,7 +4,7 @@ module TudeTester
       "#{super}#{INDENT}assert_text \"#{arg_one}\"\n\n"
     end
 
-    def friendly_type
+    def self.friendly_type
       "Text"
     end
   end

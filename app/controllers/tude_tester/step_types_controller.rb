@@ -5,5 +5,9 @@ module TudeTester
     def index
       render json: Step.leafs
     end
+
+    def parents
+      render json: Step.parent_types
+    end
   end
 end
