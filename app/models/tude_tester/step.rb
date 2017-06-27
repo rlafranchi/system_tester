@@ -26,12 +26,28 @@ module TudeTester
       self.class.parent_type
     end
 
+    def self.args
+      [
+        {
+          name: 'arg_one',
+          label: 'One',
+          type: 'text'
+        },
+        {
+          name: 'arg_two',
+          label: 'Two',
+          type: 'text'
+        }
+      ]
+    end
+
     def self.leafs
       (descendants - direct_descendants).map do |desc|
         {
           name: desc.to_s,
           friendly: desc.friendly_type,
-          parent: desc.parent_type
+          parent: desc.parent_type,
+          args: desc.args
         }
       end.sort_by { |step_type| [step_type[:parent_type], step_type[:friendly]] }
     end

@@ -7,5 +7,20 @@ module TudeTester
     def self.friendly_type
       "Selector"
     end
+
+    def self.args
+      [
+        {
+          name: 'arg_one',
+          label: 'Selector',
+          type: 'text'
+        },
+        {
+          name: 'arg_two',
+          lable: 'Text',
+          type: 'text'
+        }
+      ]
+    end
   end
 end
