@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    tude_tester (0.1.0)
+    system_tester (0.1.0)
       acts_as_list (~> 0.8.0)
       rails (~> 5.1.0)
 
@@ -117,7 +117,7 @@ PLATFORMS
 DEPENDENCIES
   rack-cors
   sqlite3
-  tude_tester!
+  system_tester!
 
 BUNDLED WITH
-   1.15.0
+   1.15.1

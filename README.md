@@ -1,4 +1,4 @@
-# TudeTester
+# SystemTester
 Short description and motivation.
 
 ## Usage
@@ -8,7 +8,7 @@ How to use my plugin.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'tude_tester'
+gem 'system_tester'
 ```
 
 And then execute:
@@ -18,7 +18,7 @@ $ bundle
 
 Or install it yourself as:
 ```bash
-$ gem install tude_tester
+$ gem install system_tester
 ```
 
 ## Contributing

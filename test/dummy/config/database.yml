@@ -24,6 +24,6 @@ production:
   <<: *default
   database: db/production.sqlite3
 
-tude_tester:
+system_tester:
   <<: *default
-  database: db/tude_tester.sqlite3
+  database: db/system_tester.sqlite3

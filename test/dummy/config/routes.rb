@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
   resources :examples
-  mount TudeTester::Engine => "/tude_tester"
+  mount SystemTester::Engine => "/system_tester"
 end
