@@ -4,7 +4,7 @@ module SystemTester
       "#{INDENT}# Action: #{title}\n"
     end
 
-    def bg_css
+    def self.bg_css
       "orange"
     end
 

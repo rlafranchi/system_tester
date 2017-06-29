@@ -18,12 +18,28 @@ module SystemTester
       ancestors.fourth.name.demodulize
     end
 
+    def self.bg_css
+      "teal"
+    end
+
+    def self.text_css
+      "white-text"
+    end
+
     def friendly_type
       self.class.friendly_type
     end
 
     def parent_type
       self.class.parent_type
+    end
+
+    def bg_css
+      self.class.bg_css
+    end
+
+    def text_css
+      self.class.text_css
     end
 
     def self.args
@@ -59,14 +75,6 @@ module SystemTester
           friendly: desc.friendly_type
         }
       end.sort_by { |step_type| step_type[:friendly] }
-    end
-
-    def bg_css
-      "teal"
-    end
-
-    def text_css
-      "white-text"
     end
   end
 end

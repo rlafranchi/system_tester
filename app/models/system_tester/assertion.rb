@@ -4,7 +4,7 @@ module SystemTester
       "#{INDENT}# Assertion: #{title}\n"
     end
 
-    def bg_css
+    def self.bg_css
       "green"
     end
 
