@@ -7,7 +7,7 @@ module SystemTester
     has_many :steps, through: :stair_steps
 
     def to_s
-      "#{INDENT}# Stair #{title}\n#{INDENT}#{method_name}"
+      "#{INDENT}# Stair #{title}\n#{INDENT}#{method_name}\n\n"
     end
 
     def module
@@ -20,6 +20,14 @@ module SystemTester
 
     def module_name
       stripped_title.camelize
+    end
+
+    def icon
+      "clear_all"
+    end
+
+    def self.bg_css
+      "deep-purple"
     end
 
     private
@@ -41,10 +49,6 @@ module SystemTester
 
     def method_name
       stripped_title.underscore
-    end
-
-    def self.bg_css
-      "magneta"
     end
   end
 end

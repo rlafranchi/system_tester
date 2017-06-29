@@ -42,6 +42,10 @@ module SystemTester
       self.class.text_css
     end
 
+    def module
+      ""
+    end
+
     def self.args
       [
         {
