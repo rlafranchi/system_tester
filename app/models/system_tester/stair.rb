@@ -1,10 +1,11 @@
 module SystemTester
   class Stair < Step
     has_many :stair_steps,
+             -> { order 'position asc' },
              class_name: "SystemTester::StairStep",
              foreign_key: "system_tester_stair_id",
              dependent: :destroy
-    has_many :steps, through: :stair_steps
+    has_many :steps, -> { order 'position asc' }, through: :stair_steps
 
     def to_s
       "#{INDENT}# Stair #{title}\n#{INDENT}#{method_name}\n\n"
@@ -34,13 +35,14 @@ module SystemTester
 
     def open
       str = ""
-      str << "module #{module_name}\n"
-      str << "  def #{method_name}\n"
+      str << "module SystemTester\n"
+      str << "  module #{module_name}\n"
+      str << "    def #{method_name}\n"
       str
     end
 
     def close
-      "  end\nend\n"
+      "    end\n  end\nend\n"
     end
 
     def stripped_title

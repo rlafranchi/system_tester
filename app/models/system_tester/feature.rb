@@ -21,7 +21,7 @@ module SystemTester
       str << "module SystemTester\n"
       str << "  class #{stripped_title.camelize}Test < ApplicationSystemTestCase\n"
       stairs.each do |stair|
-        str << "  include #{stair.module_name}"
+        str << "    include #{stair.module_name}\n"
       end
       str << "\n" unless stairs.empty?
       str
@@ -36,7 +36,7 @@ module SystemTester
     end
 
     def stairs
-      scenarios.joins(scenario_steps: :step).where("system_tester_steps.type = 'SystemTester::Stair'")
+      Stair.joins(:scenarios).where("system_tester_scenarios.system_tester_feature_id = ?", id)
     end
   end
 end

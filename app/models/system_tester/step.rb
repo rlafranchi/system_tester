@@ -10,6 +10,12 @@ module SystemTester
              dependent: :destroy
     has_many :scenarios, through: :scenario_steps
 
+    has_many :stair_steps,
+             class_name: "SystemTester::StairStep",
+             foreign_key: "system_tester_step_id",
+             dependent: :destroy
+    has_many :stairs, through: :stair_steps
+
     def self.friendly_type
       name.demodulize
     end

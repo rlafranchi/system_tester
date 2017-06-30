@@ -46,7 +46,16 @@ module SystemTester
     def step_json_options
       {
         methods: [:type, :friendly_type, :parent_type, :to_s, :bg_css, :text_css, :icon, :module],
-        include: :scenarios
+        include: {
+          scenarios: {},
+          stair_steps: {
+            include: {
+              step: {
+                methods: [:friendly_type, :parent_type, :bg_css, :text_css, :icon]
+              }
+            }
+          }
+        }
       }
     end
   end

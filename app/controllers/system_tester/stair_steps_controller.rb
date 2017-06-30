@@ -29,7 +29,7 @@ module SystemTester
     private
 
     def stair_step_params
-      params.require(:stair_step).permit(:position, :system_tester_step_id, :system_tester_scenario_id)
+      params.require(:stair_step).permit(:position, :system_tester_step_id, :system_tester_stair_id)
     end
 
     def stair_step_json_options
