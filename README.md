@@ -54,7 +54,8 @@ testing steps:
  * Scenarios - 1:M assocation from Feature to Scenario. A Scenario is one test method.
  * Steps - Basically a line of code that can be an action or an assertion. STI is used to provide different step types.
  * ScenarioSteps - M:M assocation for Steps and Scenarios which also as a position attribute to allow for reordering.
- * Stairs - TODO - an ordered group of steps that can be reused.
+ * Stairs - an ordered group of steps that can be reused.
+ * StairSteps - M:M association to support stairs, Stair inherits from Step so the fk points back to the same table.
 
 ## License
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
