@@ -8,7 +8,7 @@ module SystemTester
     has_many :steps, -> { order 'position asc' }, through: :stair_steps
 
     def to_s
-      "#{INDENT}# Stair #{title}\n#{INDENT}#{method_name}\n\n"
+      "#{INDENT}# Stair: #{title}\n#{INDENT}#{method_name}\n\n"
     end
 
     def module
