@@ -1,3 +1,4 @@
+require 'system_tester/version'
 module SystemTester
   class StatusController < ApplicationController
 
