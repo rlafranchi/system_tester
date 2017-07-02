@@ -1,5 +1,6 @@
 module SystemTester
   class Stair < Step
+    include SystemTester::Fileable
     has_many :stair_steps,
              -> { order 'position asc' },
              class_name: "SystemTester::StairStep",
@@ -18,6 +19,7 @@ module SystemTester
       str << close
       str
     end
+    alias_method :code_to_write, :module
 
     def module_name
       stripped_title.camelize
@@ -49,8 +51,28 @@ module SystemTester
       title.gsub(/\s+/,"")
     end
 
+    def stripped_title_was
+      title_was.gsub(/\s+/,"")
+    end
+
     def method_name
       stripped_title.underscore
+    end
+
+    def method_name_was
+      stripped_title_was.underscore
+    end
+
+    def base_dir
+      File.join("support", "system_tester")
+    end
+
+    def file_name
+      "#{method_name}.rb"
+    end
+
+    def file_name_was
+      "#{method_name_was}.rb"
     end
   end
 end

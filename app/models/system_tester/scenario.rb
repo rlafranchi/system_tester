@@ -12,6 +12,10 @@ module SystemTester
              dependent: :destroy
     has_many :steps, -> { order 'position asc' }, through: :scenario_steps
 
+    after_commit do
+      feature.touch if feature.present?
+    end
+
     def to_s
       str = ""
       str << open

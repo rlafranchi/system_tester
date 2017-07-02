@@ -16,12 +16,21 @@ module SystemTester
              dependent: :destroy
     has_many :stairs, through: :stair_steps
 
+    after_commit do
+      stairs.each do |stair|
+        stair.touch
+      end
+      scenarios.each do |scenario|
+        scenario.feature.touch if scenario.feature.present?
+      end
+    end
+
     def self.friendly_type
       name.demodulize
     end
 
     def self.parent_type
-      ancestors.fourth.name.demodulize
+      ancestors.fourth.name ? ancestors.fourth.name.demodulize : "Step"
     end
 
     def self.bg_css
