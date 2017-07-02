@@ -9,4 +9,5 @@ SystemTester::Engine.routes.draw do
       get :parents
     end
   end
+  resources :status, only: [:index]
 end
