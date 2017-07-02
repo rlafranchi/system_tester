@@ -19,7 +19,10 @@ module SystemTester
 
     def open
       str = ""
-      str << "require 'system_tester_system_test_case'\n\n"
+      stairs.each do |stair|
+        str << "require 'support/system_tester/#{stair.method_name}'\n"
+      end
+      str << "require_relative 'system_tester_system_test_case'\n\n"
       str << "module SystemTester\n"
       str << "  class #{stripped_title.camelize}Test < SystemTesterSystemTestCase\n"
       stairs.each do |stair|
@@ -50,11 +53,11 @@ module SystemTester
     end
 
     def file_name
-      "#{stripped_title.underscore}.rb"
+      "#{stripped_title.underscore}_test.rb"
     end
 
     def file_name_was
-      "#{stripped_title_was.underscore}.rb"
+      "#{stripped_title_was.underscore}_test.rb"
     end
   end
 end

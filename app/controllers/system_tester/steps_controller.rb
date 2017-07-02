@@ -34,7 +34,7 @@ module SystemTester
 
     def destroy
       Step.find(params[:id]).destroy!
-      render head: :ok
+      render json: {}
     end
     
     private

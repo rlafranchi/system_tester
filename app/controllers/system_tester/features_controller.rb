@@ -3,7 +3,6 @@ require_dependency "system_tester/application_controller"
 module SystemTester
   class FeaturesController < ApplicationController
     def index
-      Rails.logger.debug "Heeeeeeeeee"
       render json: Feature.all.to_json(feature_json_options)
     end
 
@@ -27,7 +26,7 @@ module SystemTester
 
     def destroy
       Feature.find(params[:id]).destroy!
-      render head: :ok
+      render json: {}
     end
 
     private

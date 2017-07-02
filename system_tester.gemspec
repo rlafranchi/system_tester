@@ -18,6 +18,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency "rails", "~> 5.1.0"
   s.add_dependency "acts_as_list", "~> 0.8.0"
+  s.add_dependency "rack-cors"
 
   s.add_development_dependency "sqlite3"
 end

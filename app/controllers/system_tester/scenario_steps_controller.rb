@@ -23,7 +23,7 @@ module SystemTester
 
     def destroy
       ScenarioStep.find(params[:id]).destroy!
-      render head: :ok
+      render json: {}
     end
 
     private

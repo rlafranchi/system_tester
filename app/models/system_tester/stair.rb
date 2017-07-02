@@ -25,6 +25,10 @@ module SystemTester
       stripped_title.camelize
     end
 
+    def method_name
+      stripped_title.underscore
+    end
+
     def icon
       "clear_all"
     end
@@ -53,10 +57,6 @@ module SystemTester
 
     def stripped_title_was
       title_was.gsub(/\s+/,"")
-    end
-
-    def method_name
-      stripped_title.underscore
     end
 
     def method_name_was

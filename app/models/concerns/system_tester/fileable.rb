@@ -69,7 +69,7 @@ module SystemTester
 
       def system_test_case_content
         <<EOF
-require "../../test_helper"
+require "test_helper"
 
 module SystemTester
   class SystemTesterSystemTestCase < ActionDispatch::SystemTestCase

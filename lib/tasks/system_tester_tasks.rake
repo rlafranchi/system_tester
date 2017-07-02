@@ -4,6 +4,8 @@
 #   - potentially load using sql instead of migrations
 #   - auto mount in the routes
 #   - auto add to database.yml defaulting to sqlite3
+#   - create test directories
+#   - copy system_tester_system_test_case
 
 # remove migration copy in favor of custom migration task
 Rake::Task["system_tester:install:migrations"].clear
