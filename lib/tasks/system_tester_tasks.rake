@@ -4,7 +4,6 @@
 #   - potentially load using sql instead of migrations
 #   - auto mount in the routes
 #   - auto add to database.yml defaulting to sqlite3
-require 'system_tester/migration'
 
 # remove migration copy in favor of custom migration task
 Rake::Task["system_tester:install:migrations"].clear
@@ -22,9 +21,7 @@ namespace :system_tester do
   task :migrate => :environment do
     include ActiveRecord::Tasks
     ENV['RAILS_ENV'] = "system_tester"
-
-    DatabaseTasks.database_configuration = YAML.load_file(Rails.root.join("config", "system_tester.yml"))
-    DatabaseTasks.db_dir = Rails.root.join("db",)
+    DatabaseTasks.db_dir = Rails.root.join("db")
     DatabaseTasks.env = "system_tester"
     DatabaseTasks.migrations_paths = [SystemTester::Engine.root.join("db", "migrate")]
     DatabaseTasks.root = Rails.root

@@ -1,4 +1,4 @@
-class CreateStairSteps < ActiveRecord::Migration[5.1]
+class CreateSystemTesterStairSteps < ActiveRecord::Migration[5.1]
   def change
     create_table :system_tester_stair_steps do |t|
       t.integer :position

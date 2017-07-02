@@ -12,13 +12,6 @@
 
 ActiveRecord::Schema.define(version: 20170629120850) do
 
-  create_table "examples", force: :cascade do |t|
-    t.string "title"
-    t.text "comment"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "system_tester_features", force: :cascade do |t|
     t.string "title"
     t.datetime "created_at", null: false

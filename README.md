@@ -41,6 +41,8 @@ end
 Start your dev server and you are good to go.
 
 ## Chrome extension
+![image](screenshot.png)
+
 The chrome extension provides a Devtools tab and acts as a client to this gem.
 
 IN DEVELOPMENT - to request access feel free to dm on twitter @ralafranchi.
@@ -59,6 +61,3 @@ testing steps:
 
 ## License
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-
-## TODOS
- * File management and hooks to create the scripts. To get the code for a feature you can call `to_s` on it.
