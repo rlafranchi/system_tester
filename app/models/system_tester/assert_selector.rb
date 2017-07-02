@@ -17,7 +17,7 @@ module SystemTester
         },
         {
           name: 'arg_two',
-          lable: 'Text',
+          label: 'Text',
           type: 'text'
         }
       ]
