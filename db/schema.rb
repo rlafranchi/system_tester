@@ -12,14 +12,25 @@
 
 ActiveRecord::Schema.define(version: 20170629120850) do
 
+  create_table "examples", force: :cascade do |t|
+    t.string "title"
+    t.text "comment"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "system_tester_features", force: :cascade do |t|
     t.string "title"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "system_tester_scenario_steps", force: :cascade do |t|
     t.integer "position"
     t.integer "system_tester_step_id"
     t.integer "system_tester_scenario_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["system_tester_scenario_id"], name: "index_st_st_scenario_id"
     t.index ["system_tester_step_id"], name: "index_system_tester_scenario_steps_on_system_tester_step_id"
   end
@@ -27,6 +38,8 @@ ActiveRecord::Schema.define(version: 20170629120850) do
   create_table "system_tester_scenarios", force: :cascade do |t|
     t.string "title"
     t.integer "system_tester_feature_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["system_tester_feature_id"], name: "index_system_tester_scenarios_on_system_tester_feature_id"
   end
 
@@ -34,6 +47,8 @@ ActiveRecord::Schema.define(version: 20170629120850) do
     t.integer "position"
     t.integer "system_tester_step_id"
     t.integer "system_tester_stair_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["system_tester_stair_id"], name: "index_system_tester_stair_steps_on_system_tester_stair_id"
     t.index ["system_tester_step_id"], name: "index_system_tester_stair_steps_on_system_tester_step_id"
   end
@@ -43,6 +58,8 @@ ActiveRecord::Schema.define(version: 20170629120850) do
     t.string "type"
     t.string "arg_one"
     t.string "arg_two"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

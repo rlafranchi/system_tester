@@ -49,6 +49,7 @@ GEM
       activerecord (>= 3.0)
     arel (8.0.0)
     builder (3.2.3)
+    byebug (9.0.6)
     concurrent-ruby (1.0.5)
     erubi (1.6.0)
     globalid (0.4.0)
@@ -115,6 +116,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  byebug
   rack-cors
   sqlite3
   system_tester!

@@ -23,7 +23,7 @@ system_tester:
 And then install and run the migrations:
 ```bash
 $ bundle install
-$ RAILS_ENV=system_tester rails db:migrate
+$ rails system_tester:migrate
 ```
 
 Mount the engine in config/routes.rb:
