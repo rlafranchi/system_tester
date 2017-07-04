@@ -1,6 +1,7 @@
 module SystemTester
   class Step < ApplicationRecord
-    include TitleValidatable
+    # include TitleValidatable
+    validates_presence_of :title
     validates_uniqueness_of :title, scope: [:type, :arg_one, :arg_two]
 
     INDENT = " " * 6

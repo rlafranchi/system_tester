@@ -1,5 +1,7 @@
 module SystemTester
   class Stair < Step
+    include SystemTester::TitleValidatable
+    validates_uniqueness_of :title
     include SystemTester::Fileable
     has_many :stair_steps,
              -> { order 'position asc' },
