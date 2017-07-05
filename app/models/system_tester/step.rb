@@ -98,7 +98,7 @@ module SystemTester
     end
 
     def commented_title
-      title.split("\n").map { |line| "# #{line}" }.join("\n").shift(2)
+      title.split("\n").map { |line| "# #{line}" }.join("\n")[2..-1]
     end
   end
 end
