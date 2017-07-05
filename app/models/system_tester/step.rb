@@ -4,6 +4,10 @@ module SystemTester
     validates_presence_of :title
     validates_uniqueness_of :title, scope: [:type, :arg_one, :arg_two]
 
+    before_validation do
+      self.title = title.split("\n").join("\n# ")
+    end
+
     INDENT = " " * 6
     has_many :scenario_steps,
              class_name: "SystemTester::ScenarioStep",

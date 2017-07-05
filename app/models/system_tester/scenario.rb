@@ -1,6 +1,6 @@
 module SystemTester
   class Scenario < ApplicationRecord
-    validates_presence_of :title
+    include SystemTester::TitleValidatable
     validates_uniqueness_of :title, scope: :system_tester_feature_id
 
     INDENT = " " * 4
