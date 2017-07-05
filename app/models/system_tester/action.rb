@@ -1,7 +1,7 @@
 module SystemTester
   class Action < Step
     def to_s
-      "#{INDENT}# Action: #{title}\n"
+      "#{INDENT}# Action: #{commented_title}\n"
     end
 
     def self.bg_css

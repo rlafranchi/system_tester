@@ -4,10 +4,6 @@ module SystemTester
     validates_presence_of :title
     validates_uniqueness_of :title, scope: [:type, :arg_one, :arg_two]
 
-    before_validation do
-      self.title = title.split("\n").join("\n# ")
-    end
-
     INDENT = " " * 6
     has_many :scenario_steps,
              class_name: "SystemTester::ScenarioStep",
@@ -99,6 +95,10 @@ module SystemTester
           friendly: desc.friendly_type
         }
       end.sort_by { |step_type| step_type[:friendly] }
+    end
+
+    def commented_title
+      title.split("\n").map { |line| "# #{line}" }.join("\n").shift(2)
     end
   end
 end

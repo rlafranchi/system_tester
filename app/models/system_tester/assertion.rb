@@ -1,7 +1,7 @@
 module SystemTester
   class Assertion < Step
     def to_s
-      "#{INDENT}# Assertion: #{title}\n"
+      "#{INDENT}# Assertion: #{commented_title}\n"
     end
 
     def self.bg_css
