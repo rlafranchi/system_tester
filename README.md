@@ -41,7 +41,7 @@ end
 Start your dev server and you are good to go.
 
 ## Chrome extension
-![image](screenshot.png)
+[![System Tester Demo](https://img.youtube.com/vi/4JlQFqIXnBU/0.jpg)](https://www.youtube.com/watch?v=4JlQFqIXnBU)
 
 The chrome extension provides a Devtools tab and acts as a client to this gem.
 
