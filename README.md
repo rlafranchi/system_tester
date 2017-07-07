@@ -45,7 +45,7 @@ Start your dev server and you are good to go.
 
 The chrome extension provides a Devtools tab and acts as a client to this gem.
 
-IN DEVELOPMENT - to request access feel free to dm on twitter @ralafranchi.
+**IN DEVELOPMENT** - to request access feel free to dm me on twitter [@ralafranchi](https://twitter.com/ralafranchi).
 
 ## Design
 System Tester is designed to work with a chrome extension, but could potentially be used for other applications as well.
