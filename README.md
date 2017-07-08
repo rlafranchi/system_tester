@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/rlafranchi/system_tester.svg?branch=master)](https://travis-ci.org/rlafranchi/system_tester)
 # System Tester
 A development tool for creating and managing system tests in Ruby on Rails >= 5.1 applications
 
