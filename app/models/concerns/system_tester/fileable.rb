@@ -50,7 +50,7 @@ module SystemTester
       end
 
       def delete_file
-        File.delete(full_file)
+        File.delete(full_file) if File.exist?(full_file)
       end
 
       def delete_old_file
