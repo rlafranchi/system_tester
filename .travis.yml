@@ -1,0 +1,12 @@
+sudo: false
+language: ruby
+cache: bundler
+rvm:
+  - 2.2
+  - 2.3
+  - 2.4
+  - ruby-head
+script: bin/rails test
+matrix:
+ allow_failures:
+   - rvm: ruby-head
