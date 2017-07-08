@@ -5,7 +5,15 @@ require "rails/test_help"
 require "faker"
 require "fabrication"
 require "simplecov"
-SimpleCov.start
+SimpleCov.start :rails do
+  filters.clear
+  add_filter do |src|
+    !(src.filename =~ /^#{SimpleCov.root}/) unless src.filename =~ /system_tester/
+  end
+  add_filter '/app/jobs/'
+  add_filter '/lib/'
+  add_filter '/test/'
+end
 
 Fabrication.configure do |config|
   config.fabricator_path = 'test/fabricators'
