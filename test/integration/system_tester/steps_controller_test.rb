@@ -20,6 +20,13 @@ module SystemTester
       assert_response :success
     end
 
+    # TODO new endopint not being used by client
+    # the intention is to preview the code before saving
+    test "#new" do
+      get '/system_tester/steps/new', params: {step: {title: "happy", type: "SystemTester::ClickOn"}}
+      assert_response :success
+    end
+
     test "#create" do
       assert_difference 'SystemTester::Step.count', 1 do
         post '/system_tester/steps', params: step_params
