@@ -7,11 +7,6 @@ module SystemTester
       @scenario_step.touch
     end
 
-    def teardown
-      Feature.destroy_all
-      FileUtils.rm_r(Rails.root.join("test", "system", "system_tester"))
-    end
-
     test "#create" do
       assert_difference 'SystemTester::ScenarioStep.count', 1 do
         post '/system_tester/scenario_steps', params: scenario_step_params

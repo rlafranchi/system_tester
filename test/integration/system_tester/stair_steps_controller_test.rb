@@ -7,11 +7,6 @@ module SystemTester
       @stair_step.touch
     end
 
-    def teardown
-      Stair.destroy_all
-      FileUtils.rm_r(Rails.root.join("test", "support", "system_tester"))
-    end
-
     test "#create" do
       assert_difference 'SystemTester::StairStep.count', 1 do
         post '/system_tester/stair_steps', params: stair_step_params

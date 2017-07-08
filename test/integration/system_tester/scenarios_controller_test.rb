@@ -7,11 +7,6 @@ module SystemTester
       @scenario.touch
     end
 
-    def teardown
-      Feature.destroy_all
-      FileUtils.rm_r(Rails.root.join("test", "system", "system_tester"))
-    end
-
     test "#index" do
       get '/system_tester/scenarios'
       scenario_from_response = get_scenario(JSON.parse(response.body))

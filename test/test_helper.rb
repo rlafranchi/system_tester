@@ -20,6 +20,21 @@ Fabrication.configure do |config|
   config.path_prefix = SystemTester::Engine.root
 end
 
+class ActionDispatch::IntegrationTest
+
+  # Drop all columns after each test case.
+  teardown :clean_up
+  def clean_up
+    SystemTester::Feature.destroy_all
+    SystemTester::Stair.destroy_all
+    path1 = Rails.root.join("test", "system", "system_tester")
+    path2 = Rails.root.join("test", "support", "system_tester")
+    FileUtils.rm_r(path1) if File.exist?(path1)
+    FileUtils.rm_r(path2) if File.exist?(path2)
+  end
+
+end
+
 # Filter out Minitest backtrace while allowing backtrace from other libraries
 # to be shown.
 Minitest.backtrace_filter = Minitest::BacktraceFilter.new

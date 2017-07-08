@@ -7,7 +7,7 @@ module SystemTester
     included do
       before_save do
         FileUtils.mkdir_p(base_path)
-        unless File.exists?(system_test_case_path)
+        unless File.exists?(system_test_case_path) || "support".match(system_test_case_path)
           File.open(system_test_case_path, "w+") { |f| f.write(system_test_case_content) }
         end
       end

@@ -7,11 +7,6 @@ module SystemTester
       @feature.touch
     end
 
-    def teardown
-      Feature.destroy_all
-      FileUtils.rm_r(Rails.root.join("test", "system", "system_tester"))
-    end
-
     test "#index" do
       get '/system_tester/features'
       feature_from_response = get_feature(JSON.parse(response.body))
