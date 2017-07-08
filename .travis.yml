@@ -7,7 +7,7 @@ rvm:
   - ruby-head
 before_script:
   - bin/rails db:migrate RAILS_ENV=test
-  - bin/rails system_tester:migrate
+  - bin/rails app:system_tester:migrate
 script: bin/rails test
 matrix:
  allow_failures:
