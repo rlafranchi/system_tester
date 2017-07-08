@@ -26,6 +26,14 @@ module SystemTester
       assert_response :unprocessable_entity
     end
 
+    test "#create for stair" do
+      stair = Fabricate(:stair)
+      assert_difference 'SystemTester::ScenarioStep.count', 1 do
+        post '/system_tester/scenario_steps', params: scenario_step_params(nil, stair.id)
+      end
+      assert_response :success
+    end
+
     test "#update" do
       Fabricate(:scenario_step, position: 2, step: @scenario_step.step, scenario: @scenario_step.scenario)
       put scenario_step_path, params: scenario_step_params(2)

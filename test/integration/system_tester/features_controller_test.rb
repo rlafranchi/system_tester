@@ -33,8 +33,9 @@ module SystemTester
     end
 
     test "#update" do
-      new_title = Faker::Lorem.words(2).join(" ")
+      new_title = "New Feature Title"
       put feature_path, params: feature_params(new_title)
+      assert File.exist?(Rails.root.join("test", "system", "system_tester", "new_feature_title_test.rb"))
       assert_equal new_title, @feature.reload.title
       assert_response :success
     end

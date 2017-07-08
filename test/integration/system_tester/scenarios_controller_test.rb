@@ -19,6 +19,11 @@ module SystemTester
       assert_response :success
     end
 
+    test "#show" do
+      get scenario_path
+      assert_response :success
+    end
+
     test "#create" do
       assert_difference 'SystemTester::Scenario.count', 1 do
         post '/system_tester/scenarios', params: scenario_params
