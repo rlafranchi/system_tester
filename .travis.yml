@@ -8,6 +8,12 @@ rvm:
 before_script:
   - bin/rails db:migrate RAILS_ENV=test
   - bin/rails app:system_tester:migrate
+addons:
+  code_climate:
+    repo_token:
+      secure: "TCYPUQZA9Cp1nZur+02JMf35tvmdKhYfmH7075KbyDNuOIUYwuaJNeea7Kzg6Oh8Ffc/1BZ6RDOPsttwJa+Hs6PFkYgFlABRPkSWuGuO8pH0oP+0f0BTi+4GOabZ2Owunb2MzGCF9wyqxuCkh40NHiXYstMId4QI60u8ac3VpC4nMHwvpbDiffOxoQf8nRs5XpVFPn9Izi9Ct9o/DgK5gnFOZKF6MEzKc6qezNnf9h3qUaa4dBHl371cjfsY4eIWeyp/UB/zt2ReamjOu4aVjZ7RJ9ckhVfbfhL7lqdW21dVRxy/ybgxeFQLS8j2HQ3hRbFvWvOsERbQ2Qxl8ni53yxJdkXRIPcBs+/Q9t3MrjcAJbZbHXlWNtaS95gsWhlDIhVigW4GDjHDkkXv5aYR9OfCrEX5pbi3bHarU11BZ6a5qGKF+bcUhRguGdfsjekc5347gda8sn88C3i7oABHn3ZTzkJVOCR1ULHsCX5l9S+81NHIoT8XRGyXmjxb7eClCX43TbvAYttJMlhM+hFagx40RHaB+kE7qIVh5jgCqLQYx2OgF2H8c/oCVoGgFS7aWHKxJ8bApI7hFL2nyLnHiRTO3KyLEXFNKaDj9RLKHNHdo2OYLhzt85WSYK6FxezjsX3XZRaZ2oCUdUSEwlQhqbpJpXkH9PjNKJktb2ogUZE="
+after_success:
+  - bundle exec codeclimate-test-reporter
 script: bin/rails test
 matrix:
  allow_failures:

@@ -13,3 +13,8 @@ gemspec
 # To use a debugger
 gem 'byebug', group: [:development, :test]
 gem 'rack-cors', require: 'rack/cors', group: [:development, :test]
+
+group :test do
+  gem 'simplecov'
+  gem 'codeclimate-test-reporter', '~> 1.0.0'
+end

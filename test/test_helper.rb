@@ -4,6 +4,8 @@ ActiveRecord::Migrator.migrations_paths << File.expand_path('../../db/migrate', 
 require "rails/test_help"
 require "faker"
 require "fabrication"
+require "simplecov"
+SimpleCov.start
 
 Fabrication.configure do |config|
   config.fabricator_path = 'test/fabricators'
