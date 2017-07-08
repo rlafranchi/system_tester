@@ -1,4 +1,6 @@
 [![Build Status](https://travis-ci.org/rlafranchi/system_tester.svg?branch=master)](https://travis-ci.org/rlafranchi/system_tester)
+[![Code Climate](https://codeclimate.com/github/rlafranchi/system_tester/badges/gpa.svg)](https://codeclimate.com/github/rlafranchi/system_tester)
+[![Test Coverage](https://codeclimate.com/github/rlafranchi/system_tester/badges/coverage.svg)](https://codeclimate.com/github/rlafranchi/system_tester/coverage)
 # System Tester
 A development tool for creating and managing system tests in Ruby on Rails >= 5.1 applications
 
