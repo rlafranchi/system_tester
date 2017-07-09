@@ -6,11 +6,10 @@ module SystemTester
     initializer :cors do |app|
       app.config.middleware.insert_before 0, Rack::Cors do
         allow do
-          origins '*'
+          origins 'ebpjncfolmfiiphibdajgblbchkklbcf', 'http://localhost:8080'
           resource '/system_tester/*',
                    :headers => :any,
                    :methods => [:get, :post, :delete, :put, :patch, :options, :head]
-
         end
       end
     end
