@@ -35,7 +35,7 @@ Rails.application.routes.draw do
   # ... other routes
   
   # Mount in development environment only
-  if Rails.env.devolopment?
+  if Rails.env.development?
     mount SystemTester::Engine => "/system_tester"
   end
 end
