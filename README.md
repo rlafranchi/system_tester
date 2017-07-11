@@ -35,7 +35,7 @@ Rails.application.routes.draw do
   # ... other routes
   
   # Mount in development environment only
-  if Rails.env.devolopment?
+  if Rails.env.development?
     mount SystemTester::Engine => "/system_tester"
   end
 end
@@ -44,7 +44,7 @@ end
 Start your dev server and you are good to go.
 
 ## Chrome extension
-[![System Tester Demo](https://img.youtube.com/vi/4JlQFqIXnBU/0.jpg)](https://www.youtube.com/watch?v=4JlQFqIXnBU)
+[![System Tester Demo](https://img.youtube.com/vi/bxHQKaIT7iM/0.jpg)](https://youtu.be/bxHQKaIT7iM)
 
 The chrome extension provides a Devtools tab and acts as a client to this gem.
 
