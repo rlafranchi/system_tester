@@ -6,6 +6,7 @@ module SystemTester
       @click = Fabricate(:step, type: 'SystemTester::ClickOn')
       @fill = Fabricate(:step, type: 'SystemTester::FillIn')
       @visit = Fabricate(:step, type: 'SystemTester::Visit')
+      @select = Fabricate(:step, type: 'SystemTester::Select')
       @assert_selector = Fabricate(:step, type: 'SystemTester::AssertSelector')
       @assert_text = Fabricate(:step, type: 'SystemTester::AssertText')
       @stair = Fabricate(:stair)
