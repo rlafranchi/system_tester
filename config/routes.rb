@@ -1,4 +1,5 @@
 SystemTester::Engine.routes.draw do
+  mount ActionCable.server => '/cable'
   resources :features, only: [:index, :create, :update, :destroy], :defaults => {:format => :json}
   resources :scenarios, only: [:index, :show, :create, :update, :destroy], :defaults => {:format => :json}
   resources :steps, only: [:index, :show, :new, :create, :update, :destroy], :defaults => {:format => :json}
@@ -10,4 +11,5 @@ SystemTester::Engine.routes.draw do
     end
   end
   resources :status, only: [:index], :defaults => {:format => :json}
+  resources :executions, only: [:create]
 end

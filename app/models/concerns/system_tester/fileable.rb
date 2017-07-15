@@ -31,6 +31,10 @@ module SystemTester
         delete_file
       end
 
+      def full_file
+        File.join(base_path, file_name)
+      end
+
       private
 
       def test_path
@@ -39,10 +43,6 @@ module SystemTester
 
       def base_path
         File.join(test_path, base_dir)
-      end
-
-      def full_file
-        File.join(base_path, file_name)
       end
 
       def old_file

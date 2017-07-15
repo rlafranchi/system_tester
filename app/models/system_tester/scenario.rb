@@ -23,6 +23,11 @@ module SystemTester
       str << close
       str
     end
+
+    def line_number
+      lines = feature.to_s.split("\n")
+      lines.index { |line| open.chomp === line } + 1
+    end
   
     private
     
