@@ -12,6 +12,8 @@ module SystemTester
                    :methods => [:get, :post, :delete, :put, :patch, :options, :head]
         end
       end
+
+      app.config.action_cable.allowed_request_origins = ['chrome-extension://ebpjncfolmfiiphibdajgblbchkklbcf']
     end
 
     config.to_prepare do
