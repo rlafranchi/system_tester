@@ -8,18 +8,20 @@ module SystemTester
     end
 
     def run(&block)
-      status = pty do |r,w,pid|
-        yield r.getc until r.eof?
-        Process.wait(pid)
+      pty do |r,w,pid|
+        rescue_errno pid do
+          yield r.getc until r.eof?
+        end
       end
     end
 
     def run_each_line(&block)
-      status = pty do |r,w,pid|
-        r.each do |line|
-          yield line
+      pty do |r,w,pid|
+        rescue_errno pid do
+          r.each do |line|
+            yield line
+          end
         end
-        Process.wait(pid)
       end
     end
 
@@ -28,6 +30,15 @@ module SystemTester
     def pty(&block)
       PTY.spawn(@cmd, &block)
       @status = $?.exitstatus
+    end
+
+    def rescue_errno(pid, &block)
+      begin
+        yield
+      rescue Errno::EIO
+      ensure
+        Process.wait pid
+      end
     end
   end
 end
