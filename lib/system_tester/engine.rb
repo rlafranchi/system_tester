@@ -13,7 +13,7 @@ module SystemTester
         end
       end
 
-      app.config.action_cable.allowed_request_origins = ['chrome-extension://ebpjncfolmfiiphibdajgblbchkklbcf']
+      app.config.action_cable.allowed_request_origins = ['chrome-extension://ebpjncfolmfiiphibdajgblbchkklbcf', 'http://localhost:8080']
     end
 
     config.to_prepare do
