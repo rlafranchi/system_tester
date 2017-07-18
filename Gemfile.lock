@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    system_tester (0.2.5)
+    system_tester (0.3.0)
       acts_as_list (~> 0.9.0)
       rack-cors
       rails (~> 5.1.0)
