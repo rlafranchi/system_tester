@@ -17,4 +17,5 @@ gem 'rack-cors', require: 'rack/cors', group: [:development, :test]
 group :test do
   gem 'simplecov'
   gem 'codeclimate-test-reporter', '~> 1.0.0'
+  gem 'mocha'
 end
