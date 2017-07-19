@@ -13,7 +13,3 @@ module SystemTester
     end
   end
 end
-
-%w(click_on fill_in visit).each do |dep|
-  require_dependency "system_tester/#{dep}"
-end

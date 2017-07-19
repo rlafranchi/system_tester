@@ -13,7 +13,3 @@ module SystemTester
     end
   end
 end
-
-%w(assert_text assert_selector).each do |dep|
-  require_dependency "system_tester/#{dep}"
-end
