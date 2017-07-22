@@ -3,7 +3,11 @@ layout: page
 title: System Tester
 ---
 
+## Simplify your System Tests
+
 System Tester is a development tool for creating and managing system tests in Ruby on Rails applications. As a developer or tester in QA we all know the struggles when it comes to managing automated tests.  Once a single ui element changes it can disrupt the test suite and cause failures. System tester allows you to abstract and share test steps and groups of steps.  Steps can be easily shared across features and test scenarios, which means you only have to create a step once and eliminates the need to write a single line of code for basic testing.
+
+<a id="install-button" class="c-btn" href="https://chrome.google.com/webstore/detail/system-tester/ebpjncfolmfiiphibdajgblbchkklbcf">Add to Chrome</a>
 
 ## Create and Execute a System Test
 
