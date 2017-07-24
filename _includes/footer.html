@@ -1,7 +1,7 @@
 <footer class="c-footer">
   <div class="u-container c-footer__container">
     <p>
-      &copy; {{ site.title }} {{ site.time | date: '%Y' }} &nbsp;
+      &copy; {{ site.title }} {{ site.time | date: '%Y' }} created by <a href="https://twitter.com/ralafranchi">@ralafranchi</a>
     </p>
     <p>
       {% if site.twitterUsername %}<a href="https://twitter.com/{{ site.twitterUsername }}">Twitter</a>{% endif %}
@@ -10,7 +10,10 @@
       {% if site.codepenUsername %}<a href="http://codepen.io/{{ site.codepenUsername }}">CodePen</a>{% endif %}
     </p>
   </div>
-  <a href="//www.iubenda.com/privacy-policy/8182548" class="iubenda-white iub-legal-only iubenda-embed" title="Privacy Policy">Privacy Policy</a><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src = "//cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
+  <div class="u-container">
+    <br>
+    <a href="//www.iubenda.com/privacy-policy/8182548" class="iubenda-white iub-legal-only iubenda-embed" title="Privacy Policy">Privacy Policy</a><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src = "//cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
+  </div>
 </footer>
 
 <!-- Place this tag in your head or just before your close body tag. -->
