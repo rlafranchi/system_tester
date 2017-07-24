@@ -39,3 +39,5 @@ include: [_pages]
 exclude: [_site, CHANGELOG.md, LICENSE, README.md]
 sass:
   style: compressed
+
+analytics_account: 'UA-59902682-2'
