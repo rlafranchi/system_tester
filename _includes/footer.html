@@ -1,20 +1,41 @@
-<footer class="c-footer">
-  <div class="u-container c-footer__container">
-    <p>
-      &copy; {{ site.title }} {{ site.time | date: '%Y' }} created by <a href="https://twitter.com/ralafranchi">@ralafranchi</a>
-    </p>
-    <p>
-      {% if site.twitterUsername %}<a href="https://twitter.com/{{ site.twitterUsername }}">Twitter</a>{% endif %}
-      {% if site.githubUsername %}<a href="https://github.com/{{ site.githubUsername }}">Github</a>{% endif %}
-      {% if site.dribbbleUsername %}<a href="https://dribbble.com/{{ site.dribbbleUsername }}">Dribbble</a>{% endif %}
-      {% if site.codepenUsername %}<a href="http://codepen.io/{{ site.codepenUsername }}">CodePen</a>{% endif %}
-    </p>
+<footer class="page-footer teal">
+  <div class="container">
+    <div class="row">
+      <div class="col l9 s12">
+        <h5 class="white-text">About</h5>
+        <p class="grey-text text-lighten-4">{{ site.description }}</p>
+        <a href="//www.iubenda.com/privacy-policy/8182548" class="iubenda-white iub-legal-only iubenda-embed" title="Privacy Policy">Privacy Policy</a><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src = "//cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
+        <a class="github-button" href="https://github.com/rlafranchi/system_tester" data-icon="octicon-star" data-size="small" data-show-count="true" aria-label="Star rlafranchi/system_tester on GitHub">Star</a>
+      </div>
+      <div class="col l3 s12">
+        <h5 class="white-text">Connect</h5>
+        <ul>
+          {% if site.twitterUsername %}<li><a href="https://twitter.com/{{ site.twitterUsername }}" class="teal-text text-lighten-4">Twitter</a></li>{% endif %}
+          {% if site.githubUsername %}<li><a href="https://github.com/{{ site.githubUsername }}" class="teal-text text-lighten-4">Github</a></li>{% endif %}
+          <li><a href="{{ '/contact' | prepend: site.baseurl }}" class="teal-text text-lighten-4">Contact</a></li>
+        </ul>
+      </div>
+    </div>
   </div>
-  <div class="u-container">
-    <br>
-    <a href="//www.iubenda.com/privacy-policy/8182548" class="iubenda-white iub-legal-only iubenda-embed" title="Privacy Policy">Privacy Policy</a><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src = "//cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
+  <div class="footer-copyright">
+    <div class="container">
+      &copy; {{ site.title }} {{ site.time | date: '%Y' }} made by <a class="teal-text text-lighten-4" href="http://twitter.com/ralafranchi">@ralafranchi</a>
+    </div>
   </div>
 </footer>
 
 <!-- Place this tag in your head or just before your close body tag. -->
 <script async defer src="https://buttons.github.io/buttons.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script async defer src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
+<script>
+  $(document).ready(function() {
+    $('.button-collapse').sideNav();
+    var href = window.location.href;
+    console.log(href);
+    var contactSaved = href.split('?saved=');
+    if (contactSaved.length > 1) {
+        Materialize.toast('Thank you for your interest in System Tester! Your message has been saved.', 'green', 5000);
+    }
+  });
+</script>

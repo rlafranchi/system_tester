@@ -1,7 +1,15 @@
-<nav class="c-navigation {% if site.fixedNav == 'true' %}is-fixed{% endif %}">
-  <div class="c-navigation__container u-container">
-    <a class="c-navigation__item {% if page.url == '/' %}is-active{% endif %}" href="{{ "/" | prepend: site.baseurl }}">Home</a>
-    <!--<a class="c-navigation__item {% if page.url == '/articles/' %}is-active{% endif %}" href="{{ "/articles/" | prepend: site.baseurl }}">Articles</a>-->
-    <a class="c-navigation__item {% if page.url == '/getting-started/' %}is-active{% endif %}" href="{{ "/getting-started/" | prepend: site.baseurl }}">Getting Started</a>
+<nav class="teal lighten-1" role="navigation">
+  <div class="nav-wrapper container">
+    <a id="logo-container" href="{{ "/" | prepend: site.baseurl }}" class="brand-logo">System Tester</a>
+    <ul class="right hide-on-med-and-down">
+      <li class="{% if page.url == '/getting-started/' %}active{% endif %}"><a href="{{ "/getting-started/" | prepend: site.baseurl }}">Getting Started</a></li>
+      <li class="{% if page.url == '/contact/' %}active{% endif %}"><a href="{{ "/contact/" | prepend: site.baseurl }}">Contact</a></li>
+    </ul>
+
+    <ul id="nav-mobile" class="side-nav">
+      <li {% if page.url == '/getting-started/' %}active{% endif %}><a href="{{ "/getting-started/" | prepend: site.baseurl }}">Getting Started</a></li>
+      <li {% if page.url == '/contact/' %}active{% endif %}><a href="{{ "/contact/" | prepend: site.baseurl }}">Contact</a></li>
+    </ul>
+    <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
   </div>
 </nav>

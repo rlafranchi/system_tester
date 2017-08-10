@@ -2,14 +2,32 @@
 layout: default
 ---
 <article class="c-article">
-  <header class="c-header c-article__header">
-    <div class="u-container">
-      <h1 class="c-header__title">{{ page.title }}</h1>
+  <header>
+    <div class="section no-pad-bot" id="index-banner">
+      <div class="container">
+        <br><br>
+        <h1 class="header center teal-text">{{ page.title }}</h1>
+        {% if page.url == '/' %}
+          <div class="row center">
+            <a class="btn waves-effect waves-light red" href="https://chrome.google.com/webstore/detail/system-tester/ebpjncfolmfiiphibdajgblbchkklbcf"><i class="material-icons left">add</i>Add to Chrome</a>
+          </div>
+          <div class="row center">
+            <a class="github-button" href="https://github.com/rlafranchi/system_tester" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star rlafranchi/system_tester on GitHub">Star</a>
+          </div>
+        {% endif %}
+        <br><br>
+
+      </div>
     </div>
-    <a class="github-button" href="https://github.com/rlafranchi/system_tester" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star rlafranchi/system_tester on GitHub">Star</a>
   </header>
 
-  <div class="c-article__main">
-    {{ content }}
+  <div class="container">
+    <div class="section">
+      <div class="row">
+        <div class="col s12">
+          {{ content }}
+        </div>
+      </div>
+    </div>
   </div>
 </article>

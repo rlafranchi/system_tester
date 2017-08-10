@@ -45,4 +45,4 @@ Start your dev server and you are good to go.
 
 Start your free trial and install the chrome extension from the chrome webstore:
 
-<a id="install-button" class="c-btn" href="https://chrome.google.com/webstore/detail/system-tester/ebpjncfolmfiiphibdajgblbchkklbcf">Add to Chrome</a>
+<a class="btn waves-effect waves-light red" href="https://chrome.google.com/webstore/detail/system-tester/ebpjncfolmfiiphibdajgblbchkklbcf"><i class="material-icons left">add</i>Add to Chrome</a>

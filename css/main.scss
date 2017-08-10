@@ -3,37 +3,27 @@
 ---
 @charset "utf-8";
 
-// Helpers
 @import
-  'helpers/variables',
-  'helpers/mixins';
+  '../node_modules/materialize-css/sass/components/mixins',
+  '../node_modules/materialize-css/sass/components/color',
+  '../node_modules/materialize-css/sass/components/variables';
 
-// Base
-@import
-  'base/reset';
+//@import 'helpers/variables';
 
-// Utilities
 @import
-  'utilities/layout';
-
-// Components
-@import
-  'components/header',
-  'components/navigation',
-  'components/article',
-  'components/archives',
-  'components/social',
-  'components/buttons',
-  'components/footer';
-
-// Themes
-@import
-  'themes/blue',
-  'themes/green',
-  'themes/grey',
-  'themes/orange',
-  'themes/purple';
+  '../node_modules/materialize-css/sass/components/normalize';
 
 // Vendor
 @import
-  'vendor/syntax-highlighting';
+'vendor/syntax-highlighting';
+
+@import
+  '../node_modules/materialize-css/sass/components/global',
+  '../node_modules/materialize-css/sass/components/grid',
+  '../node_modules/materialize-css/sass/components/typography',
+  '../node_modules/materialize-css/sass/components/icons-material-design',
+  '../node_modules/materialize-css/sass/components/buttons',
+  '../node_modules/materialize-css/sass/components/waves',
+  '../node_modules/materialize-css/sass/components/forms/forms',
+  '../node_modules/materialize-css/sass/components/navbar',
+  '../node_modules/materialize-css/sass/components/sideNav';

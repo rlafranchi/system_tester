@@ -1,0 +1,11 @@
+{
+  "name": "system_tester_website",
+  "version": "1.0.0",
+  "main": "index.html",
+  "repository": "git@github.com:rlafranchi/system_tester.git",
+  "author": "Richard LaFranchi <rlafranchi@icloud.com>",
+  "license": "MIT",
+  "dependencies": {
+    "materialize-css": "^0.100.1"
+  }
+}

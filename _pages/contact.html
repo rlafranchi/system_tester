@@ -1,0 +1,34 @@
+---
+layout: page
+title: Contact
+permalink: /contact/
+---
+
+<div class="row">
+    <form class="col s12" action="//api.cloudstitch.com/rlafranchi/system-tester/datasources/sheet" method="POST">
+        <input type="hidden" name="_redirect" value="{{ '/thank-you/' | prepend: site.baseurl | prepend: site.url }}" />
+        <div class="row">
+            <div class="input-field col s6">
+                <input placeholder="Placeholder" id="FirstName" name="FirstName" type="text" class="validate">
+                <label for="FirstName">First Name</label>
+            </div>
+            <div class="input-field col s6">
+                <input id="LastName" name="LastName" type="text" class="validate">
+                <label for="LastName">Last Name</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <input id="email" name="email" type="email" class="validate">
+                <label for="email">Email</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <textarea id="message" name="message" class="materialize-textarea"></textarea>
+                <label for="message">Message</label>
+            </div>
+        </div>
+        <button type="submit" class="btn waves-effect waves-light teal">Submit</button>
+    </form>
+</div>
