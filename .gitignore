@@ -2,5 +2,8 @@
 .idea/
 _site
 .sass-cache
-node_modules/
-!node_modules/**/*.scss
+node_modules/hammerjs/
+node_modules/jquery/
+node_modules/materialize-css/js/
+node_modules/materialize-css/extras/
+node_modules/materialize-css/dist/
